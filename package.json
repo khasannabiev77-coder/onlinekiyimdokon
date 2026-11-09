@@ -1,0 +1,16 @@
+{
+  "name": "vip-uzb",
+  "version": "1.0.0",
+  "private": true,
+  "description": "vip.uzb — premium kiyimlar onlayn do'koni (virtual kiyib ko'rish + Telegram bot)",
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

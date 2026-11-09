@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<title>vip.uzb — Premium kiyimlar do'koni</title>
+<meta name="description" content="vip.uzb — premium kiyimlar onlayn do'koni. Kiyimlarni o'z rasmingizda virtual kiyib ko'ring va o'lchamingizga mosini tanlang.">
+<meta name="theme-color" content="#070807">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23a87c22'/%3E%3Cstop offset='1' stop-color='%23f1d78a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%23070807'/%3E%3Cpath d='M14 18 L32 48 L50 18' fill='none' stroke='url(%23g)' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="announce">🚚 500 000 so'mdan ortiq xaridlarga <b>bepul yetkazib berish</b> · Butun O'zbekiston bo'ylab · 14 kun ichida qaytarish</div>
+
+<header class="header" id="top">
+  <div class="container header-inner">
+    <a class="logo" href="#top" aria-label="vip.uzb bosh sahifa"><span class="logo-v">vip</span><span class="logo-dot">.</span><span class="logo-u">uzb</span></a>
+    <nav class="nav" aria-label="Asosiy menyu">
+      <a href="#catalog" data-nav-gender="all">Katalog</a>
+      <a href="#catalog" data-nav-gender="erkak">Erkaklar</a>
+      <a href="#catalog" data-nav-gender="ayol">Ayollar</a>
+      <a href="#catalog" data-nav-flag="sale">Chegirmalar</a>
+      <a href="#studio" class="nav-try">✨ Kiyib ko'rish</a>
+    </nav>
+    <div class="header-actions">
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="searchInput" type="search" placeholder="Kiyim qidirish…" autocomplete="off">
+      </label>
+      <button class="icon-btn cart-btn" id="cartBtn" aria-label="Savat">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="eyebrow">Yangi 2026 kolleksiyasi</span>
+        <h1>Sotib olishdan oldin <em>o'zingizda</em> kiyib ko'ring</h1>
+        <p>Rasmingizni yuklang — sun'iy intellekt tanangizni aniqlaydi va kiyimni aynan sizning o'lchamingizga moslab kiydiradi. Premium sifat, tez yetkazib berish.</p>
+        <div class="hero-cta">
+          <a href="#studio" class="btn btn-primary">✨ Rasmingizda kiyib ko'ring</a>
+          <a href="#catalog" class="btn btn-ghost">Katalogni ko'rish</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>12 000+</b><span>mamnun mijoz</span></div>
+          <div><b>4.9 ★</b><span>o'rtacha baho</span></div>
+          <div><b>24 soat</b><span>Toshkent bo'ylab</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-frame">
+          <canvas id="heroCanvas" width="600" height="900" aria-label="Manekendagi kiyim namunasi"></canvas>
+          <div class="hero-tag t1"><span>Bomber kurtka</span><b>549 000 so'm</b></div>
+          <div class="hero-tag t2"><span>O'lcham tavsiyasi</span><b>M — aynan sizga</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features container">
+    <div class="feature"><div class="f-ic">🪄</div><div><b>Virtual kiyib ko'rish</b><span>Kiyim rasmingizga tanangiz bo'yicha kiydiriladi</span></div></div>
+    <div class="feature"><div class="f-ic">📏</div><div><b>Aniq o'lcham</b><span>Bo'y, vazn va rasm asosida tavsiya</span></div></div>
+    <div class="feature"><div class="f-ic">🚚</div><div><b>Tez yetkazish</b><span>Toshkentda 24 soat, viloyatlarga 2–3 kun</span></div></div>
+    <div class="feature"><div class="f-ic">↩️</div><div><b>14 kun qaytarish</b><span>Mos kelmasa — almashtiramiz</span></div></div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="container cats-strip" id="catStrip" aria-label="Kategoriyalar"></section>
+
+  <!-- CATALOG -->
+  <section class="catalog container" id="catalog">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Katalog</span>
+        <h2>Uslubingizni toping</h2>
+      </div>
+      <div class="toolbar">
+        <button class="btn btn-ghost btn-sm filter-toggle" id="filterToggle">⚙︎ Filtrlar</button>
+        <span class="result-count" id="resultCount"></span>
+        <select id="sortSelect" aria-label="Saralash">
+          <option value="popular">Ommabop</option>
+          <option value="new">Yangilari</option>
+          <option value="price-asc">Arzonroq</option>
+          <option value="price-desc">Qimmatroq</option>
+          <option value="rating">Reyting bo'yicha</option>
+          <option value="discount">Chegirma</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="catalog-grid">
+      <div class="sheet-backdrop" id="filtersBackdrop"></div>
+      <aside class="filters" id="filters" aria-label="Filtrlar">
+        <div class="sheet-head mobile-only"><span class="sheet-grip"></span><h3>Filtrlar</h3><button class="modal-x static" id="filtersClose" aria-label="Yopish">✕</button></div>
+        <div class="filter-block">
+          <h4>Kim uchun</h4>
+          <div class="chips" id="genderChips">
+            <button class="chip active" data-g="all">Barchasi</button>
+            <button class="chip" data-g="erkak">Erkaklar</button>
+            <button class="chip" data-g="ayol">Ayollar</button>
+            <button class="chip" data-g="unisex">Uniseks</button>
+          </div>
+        </div>
+        <div class="filter-block">
+          <h4>Kategoriya</h4>
+          <div id="catFilters" class="checks"></div>
+        </div>
+        <div class="filter-block">
+          <h4>O'lcham</h4>
+          <div class="chips" id="sizeFilters"></div>
+        </div>
+        <div class="filter-block">
+          <h4>Rang</h4>
+          <div class="color-filters" id="colorFilters"></div>
+        </div>
+        <div class="filter-block">
+          <h4>Narx (so'm)</h4>
+          <div class="price-range">
+            <input type="number" id="priceMin" placeholder="dan" min="0" step="10000" inputmode="numeric">
+            <span>—</span>
+            <input type="number" id="priceMax" placeholder="gacha" min="0" step="10000" inputmode="numeric">
+          </div>
+        </div>
+        <div class="filter-block">
+          <label class="switch"><input type="checkbox" id="onlySale"><span></span> Faqat chegirmadagilar</label>
+        </div>
+        <button class="btn btn-ghost btn-sm w100" id="resetFilters">Filtrlarni tozalash</button>
+        <button class="btn btn-primary w100 mobile-only sheet-apply" id="filtersApply">Natijalarni ko'rish</button>
+      </aside>
+
+      <div>
+        <div class="active-filters" id="activeFilters"></div>
+        <div class="grid" id="productGrid"></div>
+        <div class="empty" id="emptyState" hidden>
+          <div class="empty-ic">🔍</div>
+          <h3>Hech narsa topilmadi</h3>
+          <p>Filtrlarni o'zgartirib ko'ring yoki boshqa so'z bilan qidiring.</p>
+          <button class="btn btn-primary btn-sm" id="emptyReset">Filtrlarni tozalash</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRY-ON STUDIO -->
+  <section class="studio" id="studio">
+    <div class="container">
+      <div class="section-head center">
+        <div>
+          <span class="eyebrow">Virtual kiyinish xonasi</span>
+          <h2>O'zingizda kiyib ko'ring</h2>
+          <p class="lead">Rasmingizni yuklang (bo'y-bastingiz to'liq yoki belgacha ko'rinsin, yuzingiz kameraga qaragan bo'lsin). Kiyimlar tanangizga va tanlangan o'lchamga moslab kiydiriladi.</p>
+        </div>
+      </div>
+
+      <div class="studio-grid">
+        <div class="stage-col">
+          <div class="stage" id="stage">
+            <canvas id="stageCanvas"></canvas>
+            <div class="stage-empty" id="stageEmpty">
+              <div class="drop-ic">📸</div>
+              <h3>Rasmingizni shu yerga tashlang</h3>
+              <p>yoki quyidagi tugmalardan birini tanlang</p>
+              <div class="stage-btns">
+                <label class="btn btn-primary">
+                  🖼 Rasm yuklash
+                  <input type="file" id="photoInput" accept="image/*" hidden>
+                </label>
+                <label class="btn btn-ghost mobile-only">
+                  📷 Suratga olish
+                  <input type="file" id="cameraInput" accept="image/*" capture="user" hidden>
+                </label>
+                <button class="btn btn-ghost" id="useMannequin">Maneken bilan sinash</button>
+              </div>
+            </div>
+            <div class="stage-loading" id="stageLoading" hidden>
+              <div class="spinner"></div>
+              <span id="stageLoadingText">AI tana nuqtalarini aniqlamoqda…</span>
+            </div>
+            <div class="stage-hint" id="stageHint" hidden><span class="desktop-only">Kiyimni sichqoncha bilan surib to'g'rilang</span><span class="mobile-only">Bir barmoq — surish, ikki barmoq — kattalashtirish</span></div>
+          </div>
+          <div class="stage-status" id="stageStatus"></div>
+          <div class="stage-actions" id="stageActions" hidden>
+            <label class="btn btn-ghost btn-sm">🔄 Boshqa rasm<input type="file" id="photoInput2" accept="image/*" hidden></label>
+            <button class="btn btn-ghost btn-sm" id="downloadTry">⬇️ Rasmni saqlash</button>
+            <button class="btn btn-ghost btn-sm" id="resetAdjust">↺ Joylashuvni tiklash</button>
+          </div>
+          <p class="privacy">🔒 Rasmingiz serverga yuklanmaydi — barcha hisob-kitob shu brauzerda bajariladi.</p>
+        </div>
+
+        <aside class="studio-panel">
+          <div class="panel-block">
+            <h4><span class="step">1</span> O'lchamlaringiz</h4>
+            <div class="seg" id="bodyGender">
+              <button data-v="erkak" class="active">Erkak</button>
+              <button data-v="ayol">Ayol</button>
+            </div>
+            <div class="body-inputs">
+              <label>Bo'y (sm)<input type="number" id="bodyHeight" min="120" max="220" placeholder="175" inputmode="numeric"></label>
+              <label>Vazn (kg)<input type="number" id="bodyWeight" min="30" max="200" placeholder="70" inputmode="numeric"></label>
+            </div>
+            <div class="rec" id="recBox">O'lcham tavsiyasini olish uchun bo'y va vazningizni kiriting</div>
+          </div>
+
+          <div class="panel-block">
+            <h4><span class="step">2</span> Kiyim tanlang</h4>
+            <div class="seg small" id="pickerTabs">
+              <button data-v="top" class="active">Ustki kiyim / libos</button>
+              <button data-v="bottom">Shim / yubka</button>
+            </div>
+            <div class="picker" id="picker"></div>
+          </div>
+
+          <div class="panel-block">
+            <h4><span class="step">3</span> Obrazingiz</h4>
+            <div id="layers" class="layers"><p class="muted">Hali kiyim tanlanmadi</p></div>
+          </div>
+
+          <div class="panel-block" id="adjustBlock" hidden>
+            <h4>Aniq sozlash: <span id="adjustName" class="accent"></span></h4>
+            <label class="range">Kattalik<input type="range" id="adjS" min="0.6" max="1.6" step="0.01" value="1"></label>
+            <label class="range">Chapga / o'ngga<input type="range" id="adjX" min="-30" max="30" step="0.2" value="0"></label>
+            <label class="range">Yuqoriga / pastga<input type="range" id="adjY" min="-30" max="30" step="0.2" value="0"></label>
+            <label class="range">Burilish<input type="range" id="adjR" min="-30" max="30" step="0.5" value="0"></label>
+          </div>
+
+          <div class="outfit-total" id="outfitTotal" hidden>
+            <div><span>Obraz narxi</span><b id="outfitPrice">0</b></div>
+            <button class="btn btn-primary w100" id="outfitToCart">🛍 Obrazni savatga qo'shish</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="container trust">
+    <div class="trust-card">
+      <h3>Nega aynan vip.uzb?</h3>
+      <ul>
+        <li><b>Original sifat.</b> Har bir mahsulot sifat nazoratidan o'tadi.</li>
+        <li><b>Qulay to'lov.</b> Naqd, Click, Payme yoki karta orqali — qabul qilganda.</li>
+        <li><b>Shaxsiy menejer.</b> Buyurtmangizdan so'ng 15 daqiqa ichida qo'ng'iroq qilamiz.</li>
+      </ul>
+    </div>
+    <div class="trust-card accent-card">
+      <h3>Telegram kanalimizga qo'shiling</h3>
+      <p>Yangi kolleksiyalar va maxsus chegirmalar birinchi bo'lib sizda.</p>
+      <a class="btn btn-light" href="https://t.me/vipuzz_bot" target="_blank" rel="noopener">✈️ Telegram</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <a class="logo" href="#top"><span class="logo-v">vip</span><span class="logo-dot">.</span><span class="logo-u">uzb</span></a>
+      <p class="muted">Premium kiyimlar onlayn do'koni. Toshkent, O'zbekiston.</p>
+    </div>
+    <div><h5>Xaridorlarga</h5><a href="#catalog">Katalog</a><a href="#studio">Kiyib ko'rish</a><a href="#" data-open-size>O'lchamlar jadvali</a></div>
+    <div><h5>Aloqa</h5><a href="tel:+998900000000">+998 90 000 00 00</a><a href="https://t.me/vipuzz_bot" target="_blank" rel="noopener">Telegram</a><span class="muted">Har kuni 9:00 – 22:00</span></div>
+  </div>
+  <div class="container copyright">© 2026 vip.uzb — Barcha huquqlar himoyalangan</div>
+</footer>
+
+<!-- PRODUCT MODAL -->
+<div class="modal" id="productModal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card product-modal" role="dialog" aria-modal="true" aria-labelledby="pmName">
+    <button class="modal-x" data-close aria-label="Yopish">✕</button>
+    <div class="pm-media" id="pmMedia"></div>
+    <div class="pm-info">
+      <div class="card-cat" id="pmCat"></div>
+      <h2 id="pmName"></h2>
+      <div class="rating" id="pmRating"></div>
+      <div class="pm-price" id="pmPrice"></div>
+      <p class="pm-desc" id="pmDesc"></p>
+      <div class="pm-row"><span class="label">Rang: <b id="pmColorName"></b></span><div class="swatches lg" id="pmColors"></div></div>
+      <div class="pm-row">
+        <span class="label">O'lcham <a href="#" data-open-size class="link">o'lchamlar jadvali</a></span>
+        <div class="sizes" id="pmSizes"></div>
+        <div class="pm-rec" id="pmRec"></div>
+      </div>
+      <div class="pm-actions">
+        <div class="qty"><button id="pmMinus" aria-label="Kamaytirish">−</button><span id="pmQty">1</span><button id="pmPlus" aria-label="Ko'paytirish">+</button></div>
+        <button class="btn btn-primary grow" id="pmAdd">Savatga qo'shish</button>
+      </div>
+      <button class="btn btn-ghost w100" id="pmTry">✨ Rasmimda kiyib ko'rish</button>
+      <ul class="pm-meta"><li>🧵 <span id="pmMaterial"></span></li><li>🚚 Toshkentda 24 soatda yetkazib beramiz</li><li>↩️ 14 kun ichida bepul almashtirish</li></ul>
+    </div>
+  </div>
+</div>
+
+<!-- CART DRAWER -->
+<div class="drawer" id="cartDrawer" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <aside class="drawer-panel" role="dialog" aria-modal="true" aria-label="Savat">
+    <div class="drawer-head"><h3>Savat</h3><button class="modal-x static" data-close aria-label="Yopish">✕</button></div>
+    <div class="drawer-body" id="cartItems"></div>
+    <div class="drawer-foot" id="cartFoot">
+      <div class="free-ship" id="freeShip"></div>
+      <div class="sum-row"><span>Mahsulotlar</span><b id="cartSubtotal">0</b></div>
+      <div class="sum-row"><span>Yetkazib berish</span><b id="cartDelivery">0</b></div>
+      <div class="sum-row total"><span>Jami</span><b id="cartTotal">0</b></div>
+      <button class="btn btn-primary w100" id="checkoutBtn">Buyurtma berish</button>
+    </div>
+  </aside>
+</div>
+
+<!-- CHECKOUT -->
+<div class="modal" id="checkoutModal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card checkout" role="dialog" aria-modal="true" aria-labelledby="coTitle">
+    <button class="modal-x" data-close aria-label="Yopish">✕</button>
+    <form id="checkoutForm" novalidate>
+      <h2 id="coTitle">Buyurtmani rasmiylashtirish</h2>
+      <div class="form-grid">
+        <label>Ism familiya *<input name="name" required minlength="2" maxlength="80" autocomplete="name" placeholder="Masalan: Aziz Karimov"></label>
+        <label>Telefon raqam *<input name="phone" required inputmode="tel" autocomplete="tel" placeholder="+998 90 123 45 67"></label>
+        <label>Viloyat *
+          <select name="region" required>
+            <option>Toshkent shahri</option><option>Toshkent viloyati</option><option>Andijon</option><option>Buxoro</option><option>Farg'ona</option><option>Jizzax</option><option>Xorazm</option><option>Namangan</option><option>Navoiy</option><option>Qashqadaryo</option><option>Qoraqalpog'iston</option><option>Samarqand</option><option>Sirdaryo</option><option>Surxondaryo</option>
+          </select>
+        </label>
+        <label>Yetkazib berish
+          <select name="delivery"><option value="courier">Kuryer orqali</option><option value="pickup">Do'kondan olib ketish (bepul)</option></select>
+        </label>
+        <label class="span2">Manzil *<input name="address" required maxlength="200" autocomplete="street-address" placeholder="Tuman, ko'cha, uy, xonadon"></label>
+        <div class="span2">
+          <span class="label">To'lov usuli</span>
+          <div class="pay-opts">
+            <label><input type="radio" name="payment" value="Naqd pul" checked><span>💵 Naqd</span></label>
+            <label><input type="radio" name="payment" value="Click"><span>Click</span></label>
+            <label><input type="radio" name="payment" value="Payme"><span>Payme</span></label>
+            <label><input type="radio" name="payment" value="Karta (qabul qilganda)"><span>💳 Karta</span></label>
+          </div>
+        </div>
+        <label class="span2">Izoh<textarea name="comment" rows="2" maxlength="500" placeholder="Qo'shimcha istaklar (ixtiyoriy)"></textarea></label>
+        <label class="span2 check" id="attachTryWrap" hidden><input type="checkbox" name="attachTryon"> Virtual kiyib ko'rilgan rasmimni ham menejerga yuborish (o'lchamni aniqlashtirish uchun)</label>
+      </div>
+      <div class="co-summary" id="coSummary"></div>
+      <div class="form-error" id="formError" hidden></div>
+      <button class="btn btn-primary w100" type="submit" id="coSubmit">Buyurtmani tasdiqlash</button>
+    </form>
+    <div class="success" id="successView" hidden>
+      <div class="success-ic">✓</div>
+      <h2>Rahmat! Buyurtmangiz qabul qilindi</h2>
+      <p>Buyurtma raqami: <b id="successId"></b></p>
+      <p class="muted">Menejerimiz tez orada siz bilan bog'lanadi.</p>
+      <button class="btn btn-primary" data-close>Xaridni davom ettirish</button>
+    </div>
+  </div>
+</div>
+
+<!-- SIZE GUIDE -->
+<div class="modal" id="sizeModal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card size-guide" role="dialog" aria-modal="true" aria-labelledby="sgTitle">
+    <button class="modal-x" data-close aria-label="Yopish">✕</button>
+    <h2 id="sgTitle">O'lchamlar jadvali</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>O'lcham</th><th>Ko'krak (sm)</th><th>Bel (sm)</th><th>Son (sm)</th><th>Erkak vazni</th><th>Ayol vazni</th></tr></thead>
+      <tbody>
+        <tr><td>XS</td><td>80–86</td><td>62–68</td><td>86–90</td><td>&lt; 55 kg</td><td>&lt; 48 kg</td></tr>
+        <tr><td>S</td><td>86–92</td><td>68–74</td><td>90–96</td><td>55–64 kg</td><td>48–55 kg</td></tr>
+        <tr><td>M</td><td>92–100</td><td>74–82</td><td>96–102</td><td>64–73 kg</td><td>55–63 kg</td></tr>
+        <tr><td>L</td><td>100–108</td><td>82–90</td><td>102–108</td><td>73–84 kg</td><td>63–72 kg</td></tr>
+        <tr><td>XL</td><td>108–116</td><td>90–100</td><td>108–114</td><td>84–96 kg</td><td>72–83 kg</td></tr>
+        <tr><td>XXL</td><td>116–124</td><td>100–110</td><td>114–120</td><td>&gt; 96 kg</td><td>&gt; 83 kg</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="muted">Ikki o'lcham orasida bo'lsangiz — erkin kiyish uchun kattarog'ini tanlang.</p>
+  </div>
+</div>
+
+<!-- MOBIL PASTKI MENYU -->
+<nav class="bottom-nav" aria-label="Mobil menyu">
+  <a href="#top"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg><span>Asosiy</span></a>
+  <a href="#catalog"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg><span>Katalog</span></a>
+  <a href="#studio" class="bn-try"><span class="bn-try-ic">✨</span><span>Kiyib ko'rish</span></a>
+  <button id="bnFilters"><svg viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></svg><span>Filtr</span></button>
+  <button id="bnCart"><svg viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span>Savat</span><i class="bn-count" id="bnCount">0</i></button>
+</nav>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
